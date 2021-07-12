@@ -1,0 +1,53 @@
+dict  대부분의 연산 O(1) -> 매우 우수한 자료형 
+대부분의 언어에서 Hash Table을 이용한 자료형은 입력 순서가 유지되지 않는다 
+그러나 Python 3.7 + 내부적으로 인덱스를 이용해 순서 유지 가능
+
+★Collections 모듈에서 지원하는 기능들은 유용하니 알아두자[Dict를 efficient]★
+
+defaultdict
+
+# 6장 문자열 조작 
+# String Manipulation 
+# 유요한 팰린드롬 
+# 주어진 문자열이 팰린드롬인지 확인하라. 대소문자를 구분하지 않으며, 영문자와 숫자만을 대상으로 한다 
+
+# 'A man, a plan, a canal: Panama'
+# true 
+
+# def palindrome(input):
+#   # 1. 주어진 문자열을 문자로 반환하여 문자로 저장할 리스트 선언 
+#   strs = []
+#   # 2. 문자열의 첫번째 요소부터 마지막요소까지 변수에 대입되어 
+#   for char in input:
+#     # 3. 대소문자와 숫자인지 조건을 확인 
+#     if char.isalnum():
+#       # 4. True일 경우 리스트에 소문자로 추가
+#       strs.append(char.lower())
+
+#   # print(len(strs))
+#   # 5. 리스트의 처음과 끝을 비교
+#   for i in range(len(strs)):
+#     if strs.pop(0) == strs.pop():
+#       return True
+
+# print(palindrome('A man, a plan, a canal: Panama'))
+
+
+
+
+def isPalindrome(self, s: str) -> bool:
+  strs = []
+  for char in s:
+    if char.isalnum():
+      strs.append(char.lower())
+  
+  while len(strs) > 1:
+    if strs.pop(0) != strs.pop():
+      return False
+  
+  return True
+
+
+s1: str = "A man, a plan, a canal: Panama"
+result: bool = isPalindrome(s1)
+print(result)
