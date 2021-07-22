@@ -25,3 +25,4 @@ class Solution1:
 sol1 = Solution1()
 s = "babad"
 print(sol1.longest_palindrome(s))
+ 
