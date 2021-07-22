@@ -1,7 +1,7 @@
 # 06 - 06
 # 가장 긴 팰린드롬 부분 문자열을 출력하라.
 
-class Solution1():
+class Solution1:
     def longest_palindrome(self, s: str) -> str:
         # 팰린드롬 판별 및 투 포인터 확장
         def expand(left: int, right: int) -> str:
