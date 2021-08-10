@@ -71,7 +71,7 @@ class Solution3:
         return not rev
 
 
-# 고(Go)를 이용한 데크 구현
+## 고(Go)를 이용한 데크 구현
 ## 고(Go)
 ## 데크(deque) 자료형을 고(Go)로 바닥부터 구현한 풀이
 # const minCapacity = 16
