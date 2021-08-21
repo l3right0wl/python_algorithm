@@ -15,3 +15,4 @@ class Solution1:
             stack.append(i)
 
         return answer
+    
